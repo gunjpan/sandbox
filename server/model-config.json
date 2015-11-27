@@ -31,5 +31,45 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "MyModel": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MyModel2": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm3": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm4": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm5": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm7": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm8": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mm9": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mmm1": {
+    "dataSource": "db",
+    "public": true
+  },
+  "mmm2": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -12,18 +12,43 @@
       }
     }
   },
-  "session": {
-  },
-  "auth": {
-  },
-  "parse": {
-  },
+  "session": {},
+  "auth": {},
+  "parse": {},
   "routes": {
     "loopback#rest": {
-      "paths": ["${restApiRoot}"]
+      "paths": [
+        "${restApiRoot}"
+      ]
     }
   },
   "files": {
+    "loopback#static": [
+      { 
+         "name": "x",
+        "enabled":"false",
+       "params": "$!../client",
+        "methods":[
+          "GET"
+        ],
+        "paths": [
+          "/x"
+        ]
+        
+      },
+      { 
+         "name": "y",
+        "enabled":"false",
+         "params": "$!../client/topa/hellotopa.html",
+        "methods":[
+          "GET"
+        ],
+       
+        "paths": [
+          "/y"
+        ]
+      }
+    ]
   },
   "final": {
     "loopback#urlNotFound": {}
