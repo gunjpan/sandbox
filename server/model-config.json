@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "inCommon": {
+    "dataSource": "db",
+    "public": true
+  },
+  "inServer": {
+    "dataSource": "db",
+    "public": true
   }
 }
