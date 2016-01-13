@@ -1,0 +1,23 @@
+{
+  "name": "Moon",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "moonName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "craters": {
+      "type": "hasMany",
+      "model": "Crater",
+      "foreignKey": "moonName"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

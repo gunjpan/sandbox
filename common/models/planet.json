@@ -1,0 +1,23 @@
+{
+  "name": "Planet",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "planetName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "moons": {
+      "type": "hasMany",
+      "model": "Moon",
+      "foreignKey": "planetName"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

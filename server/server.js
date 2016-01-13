@@ -1,5 +1,6 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var rest = require('restler');
 
 var app = module.exports = loopback();
 
@@ -24,4 +25,25 @@ boot(app, __dirname, function(err) {
   // start the server if `$ node server.js`
   if (require.main === module)
     app.start();
+    
+  var Planet = app.models.Planet;
+ 
+  Planet.nestRemoting('moons');
+      rest.postJson('http://localhost:3000/api/planets', {
+                planetName: 'Earth'
+            }).on('complete', function (data, res) {
+
+                if (res.statusCode === 200) {
+                    console.log('All good!')
+                }
+                else {
+                    console.error('');
+                    console.error('FAILED TO POST NEW PLANET');
+                    console.error('-------------------------');
+                    console.error("Because of Planet.nestRemoting('moons') didn't include {hooks:false} as an option?");
+                    console.error('');
+                }
+
+       }
+    );
 });

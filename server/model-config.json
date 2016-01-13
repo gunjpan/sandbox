@@ -31,5 +31,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Planet": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Moon": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Crater": {
+    "dataSource": "db",
+    "public": true
   }
 }
