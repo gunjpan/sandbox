@@ -1,0 +1,44 @@
+{
+  "name": "PriceList",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "indexes": {
+    "ean_vendor_index": {
+      "keys": {
+        "EAN": 1,
+        "vendorId": 1
+      }
+    },
+    "options": {
+      "unique": true
+    }
+  },
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "vendorId": {
+      "type": "number",
+      "required": true
+    },
+    "EAN": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "EAN"
+    },
+    "vendor": {
+      "type": "belongsTo",
+      "model": "Vendor",
+      "foreignKey": "vendorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
