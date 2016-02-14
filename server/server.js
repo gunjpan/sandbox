@@ -25,3 +25,15 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+//register routes like you do for an express app
+app.route('/books')
+  .get(function (req, res, next) {
+    res.send('GET request to /books');
+  })
+  .post(function (req, res) {
+    res.send('POST request to /books');
+  })
+  .put(function (req, res) {
+    res.send('PUT request to /books');
+  });
