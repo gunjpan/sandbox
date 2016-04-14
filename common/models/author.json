@@ -1,0 +1,18 @@
+{
+  "name": "Author",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "articles": {
+      "type": "hasMany",
+      "model": "Article"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

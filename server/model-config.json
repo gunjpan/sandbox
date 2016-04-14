@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Article": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Author": {
+    "dataSource": "db",
+    "public": true
   }
 }
