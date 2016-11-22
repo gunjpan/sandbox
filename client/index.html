@@ -1,0 +1,18 @@
+<header>Streamer</header>
+<body>
+  <table id='row'>
+
+  </table>
+</body>
+<script>
+  var urlToChangeStream = '/api/MyModels/get-stream?_format=event-stream';
+  var src = new EventSource(urlToChangeStream);
+  var label = document.getElementById('row');
+  src.addEventListener('data', function(msg){
+    var data = JSON.parse(msg.data);
+    //console.log(data);
+    var row = label.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML = data.data.name;
+  })
+</script>
